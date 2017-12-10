@@ -11,6 +11,7 @@ SC_BLANK=' '
 SC_H='-'
 SC_V='|'
 SC_STAR='*'
+SC_R = '='
 
 # The size of the screen
 SCREEN_X=15
@@ -104,7 +105,46 @@ end
 def displayBoundaries(screen)
   # this clears the screen and sets the cursor to the top-left corner
   puts "\e[2J\e[#{1};#{1}H"
+            print SC_V
+    print SC_H * 13
+    puts SC_V
+    (1..4).each do
+    print SC_V
+    print SC_BLANK * 13
+    puts SC_V
+    end
+    (1..2).each do
+    print SC_V
+    print SC_BLANK * 6
+    print SC_V
+    print SC_BLANK * 6
+    puts SC_V     
+    end
+    print SC_V
+    print SC_BLANK * 3
+    print SC_H * 3
+    print SC_V
+    print SC_BLANK * 6
+    puts SC_V
+(1..2).each do
+    print SC_V
+    print SC_BLANK * 6
+    print SC_V
+    print SC_BLANK * 6
+    puts SC_V     
+    end
+(1..4).each do
+    print SC_V
+    print SC_BLANK * 13
+    puts SC_V
+    end
+print SC_V
+print SC_H * 4
+print SC_R * 4
+print SC_H * 5
+puts SC_V
 end
+
 
 # you need to write the code to update the position of the racquet when a user presses cursor left
 def racquetLeft(racquet)
@@ -234,4 +274,3 @@ begin
 	#trytest(screen)
 
 end
-
