@@ -11,7 +11,6 @@ SC_BLANK=' '
 SC_H='-'
 SC_V='|'
 SC_STAR='*'
-SC_R = '='
 
 # The size of the screen
 SCREEN_X=15
@@ -78,15 +77,9 @@ def update(racquet,screen,testmode)
     return x==$x.floor && y == $y.floor	
 end
 
-# You are expected to write this to display the racquet
-# It already contains a routine to display the ball.
-# The idea is that displaying an expression 
-# "\e[#{Y};#{X}H"
-# can be used to place a cursor in position with coordinates X,Y 
-# on the screen (starting from 1,1 for the top-left corner).
 def displayDyn(screen,racquet)
-
-  # clears the old position of the ball, using the value in the screen array
+	racquet = puts "\e[#{SCREEN_Y+1};#{2}H===="
+	# clears the old position of the ball, using the value in the screen array
   # and plots the current position.
   if $y >= 0 && $x >= 0 && $y < SCREEN_Y && $x < SCREEN_X
 		# erases the old ball position
@@ -97,6 +90,7 @@ def displayDyn(screen,racquet)
 		# called again, the ball can be erased
     $oldx=$x.floor;$oldy=$y.floor
   end
+  
 end
 
 # You need to write the routine that will display the contents
@@ -105,51 +99,15 @@ end
 def displayBoundaries(screen)
   # this clears the screen and sets the cursor to the top-left corner
   puts "\e[2J\e[#{1};#{1}H"
-            print SC_V
-    print SC_H * 13
-    puts SC_V
-    (1..4).each do
-    print SC_V
-    print SC_BLANK * 13
-    puts SC_V
-    end
-    (1..2).each do
-    print SC_V
-    print SC_BLANK * 6
-    print SC_V
-    print SC_BLANK * 6
-    puts SC_V     
-    end
-    print SC_V
-    print SC_BLANK * 3
-    print SC_H * 3
-    print SC_V
-    print SC_BLANK * 6
-    puts SC_V
-(1..2).each do
-    print SC_V
-    print SC_BLANK * 6
-    print SC_V
-    print SC_BLANK * 6
-    puts SC_V     
-    end
-(1..4).each do
-    print SC_V
-    print SC_BLANK * 13
-    puts SC_V
-    end
-print SC_V
-print SC_H * 4
-print SC_R * 4
-print SC_H * 5
-puts SC_V
+  screen.each do |r|
+  puts r.each { |p| p }.join()
 end
-
+end
 
 # you need to write the code to update the position of the racquet when a user presses cursor left
 def racquetLeft(racquet)
-	racquet
-end
+	
+  end
 
 # you need to write the code to update the position of the racquet when a user presses cursor right
 def racquetRight(racquet)
