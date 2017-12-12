@@ -18,6 +18,13 @@ SCREEN_Y=15
 
 RACQUET_SIZE=4
 
+# the initial position of the racquet
+$X=SCREEN_X
+$Y=2
+
+# the old coordinates of the racquet
+$oldX=$X;$oldY=$Y
+
 # the initial position of the ball
 $x=SCREEN_X/2+2
 $y=SCREEN_Y/2-2
@@ -78,7 +85,6 @@ def update(racquet,screen,testmode)
 end
 
 def displayDyn(screen,racquet)
-	racquet = puts "\e[#{SCREEN_Y+1};#{2}H===="
 	# clears the old position of the ball, using the value in the screen array
   # and plots the current position.
   if $y >= 0 && $x >= 0 && $y < SCREEN_Y && $x < SCREEN_X
@@ -106,13 +112,31 @@ end
 
 # you need to write the code to update the position of the racquet when a user presses cursor left
 def racquetLeft(racquet)
-	
+	if $oldY > 2 && $oldY <= SCREEN_Y - 4
+		# erases the old racquet position
+    print "\e[#{SCREEN_X-4};#{2}H-------------"
+		# displays the new position
+    print "\e[#{SCREEN_X-4};#{$oldY - 1}H===="
+		# records the current coordinates of the ball so that when displayDyn is 
+		# called again, the ball can be erased
+    $oldY=$oldY - 1
+  end
   end
 
 # you need to write the code to update the position of the racquet when a user presses cursor right
-def racquetRight(racquet)
-	racquet
-end
+def racquetRight(screen)
+		
+    if $oldY >= 2 && $oldY < SCREEN_Y - 4
+		# erases the old racquet position
+    print "\e[#{SCREEN_X - 4};#{2}H-------------"
+		# displays the new position
+    print "\e[#{SCREEN_X - 4};#{1+$oldY}H===="
+		# records the current coordinates of the racquet so that when displayDyn is 
+		# called again, the ball can be erased
+    $oldY=$oldY + 1
+  end
+  end
+
   
 # Reports that the game is over
 def displayEndgame
@@ -128,6 +152,7 @@ def mainloop(screen)
 
 	# initial racquet position in the middle
 	racquet=SCREEN_X/2
+	puts "\e[#{SCREEN_X-4};#{2}H===="
 	# displayes the ball and racquet
   displayDyn(screen,racquet)
     
