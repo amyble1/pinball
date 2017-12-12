@@ -12,18 +12,12 @@ SC_H='-'
 SC_V='|'
 SC_STAR='*'
 
+
 # The size of the screen
 SCREEN_X=15
 SCREEN_Y=15
 
 RACQUET_SIZE=4
-
-# the initial position of the racquet
-$X=SCREEN_X
-$Y=2
-
-# the old coordinates of the racquet
-$oldX=$X;$oldY=$Y
 
 # the initial position of the ball
 $x=SCREEN_X/2+2
@@ -36,8 +30,9 @@ $oldx=$x;$oldy=$y
 $dx=0.1
 # negative value means the ball is moving up the screen,
 # positive means moving down.
-$dy=0.2
+$dy=0.5
 
+$racquet=SCREEN_X/2
 # used to configure keyboard for input without having to press Enter
 def startKbd
 	$stdin.echo=false
@@ -76,15 +71,40 @@ end
 # testmode is true if this routine is run in a test mode where it is supposed
 # to report the decisions it has made.
 def update(racquet,screen,testmode)
+  
+    #if the ball hits a horizontal wall
+    if screen[$y.floor][$x.floor] == SC_H 
+    	$dx = $dx
+    	$dy = -$dy
+    	
+    end
+    
+    #if the ball hits a vertical wall
+    if screen[$y.floor][$x.floor] == SC_V
+    	$dx = -$dx
+    	$dy = -$dy
+    end
+    
+        
+    #if the balls misses the racquet
+    if $oldy > 15
+        return Nil
+    end
+   
     x=$x.floor
     y=$y.floor
     $x+=$dx
     $y+=$dy
     print "no_wall" if testmode
-    return x==$x.floor && y == $y.floor	
+    return x ==$x.floor && y == $y.floor
 end
 
 def displayDyn(screen,racquet)
+    
+    #prints the racquet
+    print "\e[#{SCREEN_Y};#{$racquet}H=="
+    print "\e[#{SCREEN_Y};#{$racquet-2}H=="
+	
 	# clears the old position of the ball, using the value in the screen array
   # and plots the current position.
   if $y >= 0 && $x >= 0 && $y < SCREEN_Y && $x < SCREEN_X
@@ -104,7 +124,7 @@ end
 # as well as the walls in the middle.
 def displayBoundaries(screen)
   # this clears the screen and sets the cursor to the top-left corner
-  puts "\e[2J\e[#{1};#{1}H"
+  print "\e[2J\e[#{1};#{1}H"
   screen.each do |r|
   puts r.each { |p| p }.join()
 end
@@ -112,28 +132,32 @@ end
 
 # you need to write the code to update the position of the racquet when a user presses cursor left
 def racquetLeft(racquet)
-	if $oldY > 2 && $oldY <= SCREEN_Y - 4
+	if $racquet > 4 && $racquet <= SCREEN_X - 2
 		# erases the old racquet position
-    print "\e[#{SCREEN_X-4};#{2}H-------------"
+    print "\e[#{SCREEN_Y};#{2}H-------------"
 		# displays the new position
-    print "\e[#{SCREEN_X-4};#{$oldY - 1}H===="
-		# records the current coordinates of the ball so that when displayDyn is 
-		# called again, the ball can be erased
-    $oldY=$oldY - 1
+    print "\e[#{SCREEN_Y};#{$racquet}H=="
+    print "\e[#{SCREEN_Y};#{$racquet-1}H=="
+		# records the current coordinates of the racquet so that when racquetLeft is 
+		# called again, the raquet can be erased
+    $racquet=$racquet - 1
+   
   end
   end
 
 # you need to write the code to update the position of the racquet when a user presses cursor right
 def racquetRight(screen)
 		
-    if $oldY >= 2 && $oldY < SCREEN_Y - 4
+    if $racquet >= 4 && $racquet < SCREEN_X - 2 
 		# erases the old racquet position
-    print "\e[#{SCREEN_X - 4};#{2}H-------------"
+    print "\e[#{SCREEN_Y};#{2}H-------------"
 		# displays the new position
-    print "\e[#{SCREEN_X - 4};#{1+$oldY}H===="
-		# records the current coordinates of the racquet so that when displayDyn is 
-		# called again, the ball can be erased
-    $oldY=$oldY + 1
+    print "\e[#{SCREEN_Y};#{$racquet}H=="
+    print "\e[#{SCREEN_Y};#{$racquet+1}H=="
+		# records the current coordinates of the racquet so that when racquetRight is 
+		# called again, the racquet can be erased
+    $racquet=$racquet + 1
+    
   end
   end
 
@@ -149,14 +173,14 @@ def mainloop(screen)
 	displayBoundaries(screen)
 	# configures keyboard
 	startKbd
-
+    
 	# initial racquet position in the middle
-	racquet=SCREEN_X/2
-	puts "\e[#{SCREEN_X-4};#{2}H===="
+	racquet=SCREEN_X/2	
+
 	# displayes the ball and racquet
   displayDyn(screen,racquet)
-    
-	loop do
+	
+    loop do
     # updates the position of the ball
     u=update(racquet,screen,false)
     if u == nil
