@@ -7,83 +7,11 @@
     "contributors": [],
     "diagrams": [
       {
-        "title": "Threat Model",
+        "title": "Threat Model - PrimeTech",
         "thumbnail": "./public/content/images/thumbnail.jpg",
         "id": 0,
         "diagramJson": {
-          "cells": [
-            {
-              "type": "tm.Actor",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 50,
-                "y": 50
-              },
-              "angle": 0,
-              "id": "6396d5ab-e5a3-40d2-9707-b54cb459895c",
-              "z": 1,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "actor 0"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "x": 562,
-                "y": 64
-              },
-              "target": {
-                "x": 110,
-                "y": 100
-              },
-              "vertices": [
-                {
-                  "x": 285,
-                  "y": 47
-                },
-                {
-                  "x": 256,
-                  "y": 52
-                }
-              ],
-              "id": "941c3380-da9c-4a20-9dd8-aad1b751888f",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "flow 1",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 2,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            }
-          ]
+          "cells": []
         },
         "size": {
           "height": 590,
