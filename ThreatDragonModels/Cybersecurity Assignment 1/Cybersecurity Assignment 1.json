@@ -896,11 +896,19 @@
               "target": {
                 "id": "35f8d852-1e8b-4af3-abfa-8e98d853d680"
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 1330,
+                  "y": 374
+                }
+              ],
               "id": "8af2f1b0-f800-49d7-a845-b4ad6adebf83",
               "labels": [
                 {
-                  "position": 0.5,
+                  "position": {
+                    "distance": 0.5285053679895745,
+                    "offset": -21.998281451389794
+                  },
                   "attrs": {
                     "text": {
                       "text": "Payment Response",
