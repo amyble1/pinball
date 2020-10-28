@@ -756,20 +756,20 @@
               },
               "vertices": [
                 {
-                  "x": 981,
-                  "y": 267
+                  "x": 989,
+                  "y": 303
                 }
               ],
               "id": "aa6f8c8e-3957-436c-8fbf-df33782fc52e",
               "labels": [
                 {
                   "position": {
-                    "distance": 0.5552612392039225,
-                    "offset": 25.10615577477513
+                    "distance": 0.5367521449599725,
+                    "offset": 15.097705673351705
                   },
                   "attrs": {
                     "text": {
-                      "text": "flow 22",
+                      "text": "API Response",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -808,7 +808,7 @@
                   "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "flow 23",
+                      "text": "API Request",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -1268,32 +1268,6 @@
               }
             },
             {
-              "type": "tm.Process",
-              "size": {
-                "width": 100,
-                "height": 100
-              },
-              "position": {
-                "x": 25,
-                "y": 550
-              },
-              "angle": 0,
-              "id": "0ab69ff9-8989-4232-9e44-92cf48db4b2c",
-              "z": 40,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Telecoms\nOperator's API"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
               "type": "tm.Actor",
               "size": {
                 "width": 160,
@@ -1338,8 +1312,8 @@
               "labels": [
                 {
                   "position": {
-                    "distance": 0.4988717162599203,
-                    "offset": -26.992385356815614
+                    "distance": 0.5102173480116533,
+                    "offset": -13.947661576317534
                   },
                   "attrs": {
                     "text": {
@@ -1644,82 +1618,6 @@
               }
             },
             {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "62a22af8-860f-44ba-9590-fecb75daa01e"
-              },
-              "target": {
-                "id": "0ab69ff9-8989-4232-9e44-92cf48db4b2c"
-              },
-              "vertices": [
-                {
-                  "x": 176,
-                  "y": 543
-                }
-              ],
-              "id": "f020ebd2-873d-4aca-a97a-85e97f1a44f9",
-              "labels": [
-                {
-                  "position": {
-                    "distance": 0.523468017578125,
-                    "offset": 45
-                  },
-                  "attrs": {
-                    "text": {
-                      "text": "flow 47",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 51,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
-                "id": "0ab69ff9-8989-4232-9e44-92cf48db4b2c"
-              },
-              "target": {
-                "id": "62a22af8-860f-44ba-9590-fecb75daa01e"
-              },
-              "vertices": [],
-              "id": "fcd71628-7cc0-4dfa-b14a-df2393fc291a",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "flow 48",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 52,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
               "type": "tm.Process",
               "size": {
                 "width": 100,
@@ -1744,6 +1642,90 @@
                   "class": "element-text hasNoOpenThreats isInScope"
                 }
               }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 9,
+                "y": 568
+              },
+              "angle": 0,
+              "id": "18828d41-8efa-4df0-9541-481df76aa9ab",
+              "z": 54,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Telecoms Operator's API"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "18828d41-8efa-4df0-9541-481df76aa9ab"
+              },
+              "target": {
+                "id": "62a22af8-860f-44ba-9590-fecb75daa01e"
+              },
+              "vertices": [
+                {
+                  "x": 229,
+                  "y": 552
+                }
+              ],
+              "id": "67f77771-45e1-479a-864d-bd85cab3f4ce",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "flow 48",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 55,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "x": 286,
+                "y": 616
+              },
+              "target": {
+                "id": "18828d41-8efa-4df0-9541-481df76aa9ab"
+              },
+              "vertices": [],
+              "id": "044e0f3d-48a0-4994-a92c-70fc90f54fa1",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "flow 49",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 56,
+              "attrs": {}
             }
           ]
         },
