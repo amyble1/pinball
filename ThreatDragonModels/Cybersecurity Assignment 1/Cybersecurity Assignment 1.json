@@ -71,8 +71,8 @@
                 "height": 80
               },
               "position": {
-                "x": 412,
-                "y": 297
+                "x": 217,
+                "y": 307
               },
               "angle": 0,
               "id": "de96ef9e-0bd9-405a-aaa2-e4ad09d05cce",
@@ -224,15 +224,15 @@
               "type": "tm.Flow",
               "smooth": true,
               "source": {
-                "id": "8aa6e2f9-ea6a-4cc2-b8f6-2997c8c2b125"
+                "id": "d5424603-0c19-40a4-82f4-04cd0f1f5388"
               },
               "target": {
                 "id": "de96ef9e-0bd9-405a-aaa2-e4ad09d05cce"
               },
               "vertices": [
                 {
-                  "x": 678,
-                  "y": 291
+                  "x": 447,
+                  "y": 320
                 }
               ],
               "id": "997843ff-b6e2-4d94-8b7f-c854f58f0762",
@@ -269,12 +269,12 @@
                 "id": "de96ef9e-0bd9-405a-aaa2-e4ad09d05cce"
               },
               "target": {
-                "id": "8aa6e2f9-ea6a-4cc2-b8f6-2997c8c2b125"
+                "id": "d5424603-0c19-40a4-82f4-04cd0f1f5388"
               },
               "vertices": [
                 {
-                  "x": 671,
-                  "y": 362
+                  "x": 449,
+                  "y": 378
                 }
               ],
               "id": "397ab63a-98a0-4ce4-ad44-e37c7909fb5c",
@@ -928,6 +928,97 @@
                   "class": "connection hasNoOpenThreats isInScope"
                 }
               }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 529,
+                "y": 294
+              },
+              "angle": 0,
+              "id": "d5424603-0c19-40a4-82f4-04cd0f1f5388",
+              "z": 27,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Load Balancer"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "d5424603-0c19-40a4-82f4-04cd0f1f5388"
+              },
+              "target": {
+                "id": "8aa6e2f9-ea6a-4cc2-b8f6-2997c8c2b125"
+              },
+              "vertices": [
+                {
+                  "x": 698,
+                  "y": 297
+                }
+              ],
+              "id": "486dd091-3e97-4b5e-830b-ad08acea793c",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.43139205959585014,
+                    "offset": -16.350433935007864
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "flow 27",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 28,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "8aa6e2f9-ea6a-4cc2-b8f6-2997c8c2b125"
+              },
+              "target": {
+                "id": "d5424603-0c19-40a4-82f4-04cd0f1f5388"
+              },
+              "vertices": [
+                {
+                  "x": 693,
+                  "y": 378
+                }
+              ],
+              "id": "a1dde39a-93e2-4f0e-ba7c-ee9b51a0c254",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "flow 28",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 29,
+              "attrs": {}
             }
           ]
         },
