@@ -224,8 +224,7 @@
               "type": "tm.Flow",
               "smooth": true,
               "source": {
-                "x": 543,
-                "y": 218
+                "id": "8aa6e2f9-ea6a-4cc2-b8f6-2997c8c2b125"
               },
               "target": {
                 "id": "de96ef9e-0bd9-405a-aaa2-e4ad09d05cce"
@@ -270,13 +269,16 @@
                 "id": "de96ef9e-0bd9-405a-aaa2-e4ad09d05cce"
               },
               "target": {
-                "x": 502,
-                "y": 282
+                "id": "8aa6e2f9-ea6a-4cc2-b8f6-2997c8c2b125"
               },
               "vertices": [
                 {
                   "x": 444,
                   "y": 295
+                },
+                {
+                  "x": 613,
+                  "y": 284
                 }
               ],
               "id": "397ab63a-98a0-4ce4-ad44-e37c7909fb5c",
@@ -1013,8 +1015,8 @@
               },
               "vertices": [
                 {
-                  "x": 947,
-                  "y": 157
+                  "x": 926,
+                  "y": 122
                 }
               ],
               "id": "5746063f-8222-462d-81db-b5cfceeef499",
@@ -1023,7 +1025,7 @@
                   "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "flow 30",
+                      "text": "Statistics Request",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -1062,7 +1064,7 @@
                   "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "flow 31",
+                      "text": "Statistics Response",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -1332,32 +1334,6 @@
                 },
                 ".connection": {
                   "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Process",
-              "size": {
-                "width": 100,
-                "height": 100
-              },
-              "position": {
-                "x": 336,
-                "y": 789
-              },
-              "angle": 0,
-              "id": "ac2c21a4-109a-4363-afe5-37392075caa2",
-              "z": 43,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "SNS API"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
                 }
               }
             },
@@ -1740,6 +1716,32 @@
                 },
                 ".connection": {
                   "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 341,
+                "y": 790
+              },
+              "angle": 0,
+              "id": "cc39ee7e-1338-4cfa-9260-acba0c562ea2",
+              "z": 57,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "SNS API"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
                 }
               }
             }
