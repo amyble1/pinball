@@ -19,8 +19,8 @@
                 "height": 100
               },
               "position": {
-                "x": 303,
-                "y": 83
+                "x": 779,
+                "y": 287
               },
               "angle": 0,
               "id": "8aa6e2f9-ea6a-4cc2-b8f6-2997c8c2b125",
@@ -45,8 +45,8 @@
                 "height": 100
               },
               "position": {
-                "x": 311,
-                "y": 283
+                "x": 784,
+                "y": 580
               },
               "angle": 0,
               "id": "d5358155-20c4-42b0-b202-7aa9fe71c391",
@@ -58,6 +58,32 @@
                 },
                 "text": {
                   "text": "RESTful API\n(PHP)"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 407,
+                "y": 304
+              },
+              "angle": 0,
+              "id": "de96ef9e-0bd9-405a-aaa2-e4ad09d05cce",
+              "z": 3,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Browser"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
