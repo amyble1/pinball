@@ -1128,32 +1128,6 @@
               }
             },
             {
-              "type": "tm.Store",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 1132,
-                "y": 1173
-              },
-              "angle": 0,
-              "id": "1a4cc806-e74b-45dc-8eb9-422d88ae21db",
-              "z": 35,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Cloud Storage Service\n(by External Supplier)"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
               "type": "tm.Flow",
               "smooth": true,
               "source": {
@@ -1410,8 +1384,8 @@
                 "height": 80
               },
               "position": {
-                "x": 939,
-                "y": 1180
+                "x": 1383,
+                "y": 1030
               },
               "angle": 0,
               "id": "34be5a56-7f1c-42f4-a9a3-0580c9d7eeb2",
@@ -1897,6 +1871,74 @@
                   "class": "connection hasNoOpenThreats isInScope"
                 }
               }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "296d1859-6379-4a38-925e-98547c53f2da"
+              },
+              "target": {
+                "id": "34be5a56-7f1c-42f4-a9a3-0580c9d7eeb2"
+              },
+              "vertices": [],
+              "id": "45adcc18-9c45-443a-b54a-6d3f174797bc",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "flow 54",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 63,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "34be5a56-7f1c-42f4-a9a3-0580c9d7eeb2"
+              },
+              "target": {
+                "id": "296d1859-6379-4a38-925e-98547c53f2da"
+              },
+              "vertices": [
+                {
+                  "x": 1243,
+                  "y": 1227
+                }
+              ],
+              "id": "c83606d6-5db7-4dde-a97b-ecf8a60ca4cf",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.5524113828434857,
+                    "offset": -23.9831248068387
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "flow 54",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 64,
+              "attrs": {}
             }
           ]
         },
